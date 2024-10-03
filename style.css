@@ -1,0 +1,60 @@
+/* Sección Cómo funciona */
+.como-funciona {
+  background-color: #f0fff0; /* Ligero tono verde claro */
+  padding: 50px;
+  text-align: center;
+}
+
+.como-funciona h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.funciona-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.funciona-item {
+  width: 300px;
+}
+
+.funciona-item img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.funciona-item p {
+  font-size: 1.1rem;
+  margin-top: 15px;
+}
+
+/* Sección Beneficios */
+.beneficios-sendit {
+  background-color: #f0fff0;
+  padding: 50px;
+  text-align: left;
+}
+
+.beneficios-sendit h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #333;
+}
+
+.beneficio {
+  margin-bottom: 20px;
+}
+
+.beneficio h3 {
+  font-size: 1.5rem;
+  color: #75ba75;
+}
+
+.beneficio p {
+  font-size: 1.1rem;
+  color: #333;
+}

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Arvo&family=Josefin+Sans&family=Kanit:wght@100;500&family=Lobster+Two:wght@700&family=Lumanosimo&family=Mukta:wght@500&family=Nunito:wght@300&family=Tilt+Neon&family=Ysabeau+Infant:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/2.1.0/uicons-solid-rounded/css/uicons-solid-rounded.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/2.1.0/uicons-bold-rounded/css/uicons-bold-rounded.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-rounded/css/uicons-regular-rounded.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/2.1.0/uicons-solid-rounded/css/uicons-solid-rounded.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/2.1.0/uicons-solid-rounded/css/uicons-solid-rounded.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/2.1.0/uicons-solid-rounded/css/uicons-solid-rounded.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/2.1.0/uicons-solid-rounded/css/uicons-solid-rounded.css"
+    />
+    <!-- link generador de id CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.1.0/uuidv4.min.js"></script>
+    <link
+      rel="icon"
+      href="assets/logo-ahorradas-removebg-preview.png"
+      type="image/x-icon"
+    />
+    <script src="tailwind.config.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+    <title>SendIt</title>
+  </head>
+  <body
+    class="min-h-screen flex flex-col justify-between bg-gradient-to-r from-[#71a3c1] via-[#6dbfb8] to-[#75ba75] dark:bg-gradient-to-r dark:from-[#71a3c1] dark:via-[#6dbfb8] dark:to-[#75ba75]"
+  >
+    <header class="ahorradas-title relative">
+      <nav
+        class="flex w-full lg:items-center bg-[#75ba75] dark:bg-[#6dbfb8] justify-between lg:px-9 shadow-2xl"
+      >
+        <div class="flex flex-shrink-0 items-center">
+          <h1
+            class="bg-[#75ba75] dark:bg-[#6dbfb8] font-['Agbalumo'] text-white text-2xl lg:font-medium lg:text-3xl ml-5"
+          >
+            SendIt
+          </h1>
+        </div>
+        <div>
+          <button class="bg-[#75ba75] dark:bg-[#6dbfb8] rounded-sm p-2 ml-32">
+            <i
+              class="font-['Agbalumo'] text-white text-sm lg:font-medium lg:text-l"
+              >Iniciar sesión</i
+            >
+          </button>
+          <button class="bg-black rounded-xl p-2 ml-32 mb-2">
+            <i
+              class="font-['Agbalumo'] text-white text-sm lg:font-medium lg:text-l"
+              >Registrarse</i
+            >
+          </button>
+        </div>
+        <div class="flex flex-row justify-between w-[70px] p-[10px] gap-[10px]">
+          <button id="btn-claro-oscuro" class="lg:hidden">
+            <i class="fa-solid fa-moon text-blue-600 text-lg"></i>
+          </button>
+          <button
+            id="hamburger"
+            class="text-white focus:outline-none lg:hidden"
+          >
+            <i class="fi fi-br-menu-burger"></i>
+          </button>
+        </div>
+
+        <ul
+          class="flex hidden flex-col lg:static lg:justify-end z-10 shadow-xl bg-[#75ba75] items-center absolute w-[100%] top-full justify-evenly lg:w-[0] lg:flex lg:flex-row dark:bg-[#6dbfb8]"
+          id="mobile-menu"
+        >
+          <button
+            id="boton-menu-cerrar"
+            class="lg:hidden dark:text-white w-[320px] flex justify-end text-lime-600 text-[1rem] p-[5px]"
+          >
+            <i class="fi fi-br-cross"></i>
+          </button>
+          <button id="btn-claro-oscuro2" class="hidden lg:block lg:mr-6">
+            <i class="fa-solid fa-moon text-blue-600 text-lg"></i>
+          </button>
+          <li>
+            <a
+              href="#Envios"
+              class="focus:ring-2 text-lime-600 flex lg:bg-[#75ba75] dark:lg:bg-[#6dbfb8] dark:text-white lg:hover:bg-[#6dbfb8] dark:lg:hover:bg-[#71a3c1] lg:text-white lg:w-[114px] gap-2 lg:rounded-md px-3 py-2 font-bold lg:text-sm lg:font-medium"
+            >
+              <i class="fi fi-rr-chart-histogram"></i> Envios
+            </a>
+          </li>
+          <li>
+            <a
+              href="#Paquetes"
+              class="text-lime-600 flex lg:bg-[#75ba75] lg:hover:bg-[#6dbfb8] dark:lg:hover:bg-[#71a3c1] dark:text-white dark:lg:bg-[#6dbfb8] lg:text-white lg:w-[114px] gap-2 lg:rounded-md px-3 py-2 font-bold lg:text-sm lg:font-medium"
+            >
+              <i class="fi fi-sr-tags"></i> Paquetes
+            </a>
+          </li>
+          <li>
+            <a
+              href="#Nosotros"
+              class="text-lime-600 flex lg:bg-[#75ba75] lg:hover:bg-[#6dbfb8] dark:lg:hover:bg-[#71a3c1] dark:text-white dark:lg:bg-[#6dbfb8] lg:text-white lg:w-[114px] gap-2 lg:rounded-md px-3 py-2 font-bold lg:text-sm lg:font-medium"
+            >
+              <i class="fi fi-sr-chart-pie"></i> Nosotros
+            </a>
+          </li>
+          <li>
+            <a
+              href="#Ayuda"
+              class="text-lime-600 flex lg:bg-[#75ba75] lg:hover:bg-[#6dbfb8] dark:lg:hover:bg-[#71a3c1] dark:text-white dark:lg:bg-[#6dbfb8] lg:text-white lg:w-[114px] gap-2 lg:rounded-md px-3 py-2 font-bold lg:text-sm lg:font-medium"
+            >
+              <i class="fi fi-sr-chart-pie"></i> Ayuda
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main
+      class="flex flex-col justify-center items-center min-h-screen bg-gradient-to-r from-[#71a3c1] via-[#6dbfb8] to-[#75ba75] dark:bg-gradient-to-r dark:from-[#71a3c1] dark:via-[#6dbfb8] dark:to-[#75ba75] px-4"
+    >
+      <!-- Sección de encabezado -->
+      <div class="text-white text-center mt-12">
+        <h1 class="text-4xl lg:text-5xl font-bold mb-4">
+          Con SendIt tu paquete sale al instante
+        </h1>
+        <p class="text-xl lg:text-2xl mb-8">
+          Envía artículos de manera sencilla y segura.
+        </p>
+      </div>
+
+      <!-- Formulario -->
+      <div class="bg-white rounded-lg shadow-lg p-6 w-full max-w-md">
+        <div class="mb-4">
+          <label for="ubicacion" class="sr-only">Ubicación</label>
+          <div class="relative">
+            <input
+              type="text"
+              id="ubicacion"
+              placeholder="Ingresa una ubicación"
+              class="bg-gray-100 text-gray-700 rounded-lg w-full py-3 pl-4 pr-10 focus:outline-none"
+            />
+            <i
+              class="fa-solid fa-location-arrow absolute right-3 top-3 text-gray-500"
+            ></i>
+          </div>
+        </div>
+
+        <div class="mb-4">
+          <label for="destino" class="sr-only">Destino</label>
+          <div class="relative">
+            <input
+              type="text"
+              id="destino"
+              placeholder="Ingresa un destino"
+              class="bg-gray-100 text-gray-700 rounded-lg w-full py-3 pl-4 pr-10 focus:outline-none"
+            />
+            <i
+              class="fa-solid fa-map-marker-alt absolute right-3 top-3 text-gray-500"
+            ></i>
+          </div>
+        </div>
+
+        <button
+          class="bg-[#75ba75] text-white rounded-lg py-3 w-full font-bold hover:bg-[#6dbfb8] transition-all"
+        >
+          Envía un artículo
+        </button>
+      </div>
+
+      <!-- Imagen -->
+      <div class="mt-8">
+        <img
+          src="./assets/Captura-Motito.png"
+          alt="Persona sonriente"
+          class="rounded-lg shadow-lg max-w-full h-auto"
+        />
+      </div>
+
+      <!-- Cómo funciona SendIt -->
+      <section class="como-funciona mt-12">
+        <h2>Cómo funciona SendIt</h2>
+        <div class="funciona-container flex flex-col">
+          <div class="funciona-item">
+            <img
+              src="./assets/celu-Sendit.png"
+              alt="Selecciona Envíos en la app"
+            />
+            <p>Selecciona Envíos en la app de SendIt.</p>
+          </div>
+          <div class="funciona-item">
+            <img
+              src="./assets/Reunido-conEldeApp.png"
+              alt="Envía un artículo a destino"
+            />
+            <p>Reúnete con el socio de la App y envía el artículo a destino.</p>
+          </div>
+          <div class="funciona-item">
+            <img
+              src="./assets/Deliveri-exitoso.png"
+              alt="Selecciona Envíos en la app"
+            />
+            <p>Sigue tu pedido hasta su destino al instante.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Beneficios de SendIt -->
+      <section class="beneficios-sendit mt-12">
+        <h2>Beneficios de usar SendIt</h2>
+        <div class="beneficio">
+          <h3>Disponibilidad</h3>
+          <p>
+            Puedes solicitar una entrega de la misma manera que solicitas un
+            viaje.
+          </p>
+        </div>
+        <div class="beneficio">
+          <h3>Seguimiento en tiempo real</h3>
+          <p>
+            Sigue el proceso con el seguimiento en tiempo real desde la app.
+          </p>
+        </div>
+        <div class="beneficio">
+          <h3>Flexibilidad</h3>
+          <p>
+            Envía paquetes de diferentes tamaños con flexibilidad de horarios.
+          </p>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+
+    <script src="index.js" type="module"></script>
+  </body>
+</html>
